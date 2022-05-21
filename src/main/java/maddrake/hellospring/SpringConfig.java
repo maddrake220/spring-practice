@@ -1,6 +1,7 @@
 package maddrake.hellospring;
 
 import maddrake.hellospring.repository.JdbcMemberRepository;
+import maddrake.hellospring.repository.JdbcTemplateMemberRepository;
 import maddrake.hellospring.repository.MemberRepository;
 import maddrake.hellospring.repository.MemoryMemberRepository;
 import maddrake.hellospring.service.MemberService;
@@ -27,6 +28,7 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+//        return new JdbcMemberRepository(dataSource);
+          return new JdbcTemplateMemberRepository(dataSource);
     }
 }
