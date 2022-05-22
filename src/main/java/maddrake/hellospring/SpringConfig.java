@@ -1,5 +1,6 @@
 package maddrake.hellospring;
 
+import maddrake.hellospring.aop.TImeTraceAop;
 import maddrake.hellospring.repository.*;
 import maddrake.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,11 @@ public class SpringConfig {
     }
 
 //    @Bean
+//    public TImeTraceAop timeTraceAop() {
+//        return new TImeTraceAop();
+//    }
+
+//    @Bean
 //    public MemberRepository memberRepository() {
 //        return new MemoryMemberRepository();
 //        return new JdbcMemberRepository(dataSource);
@@ -46,4 +52,6 @@ public class SpringConfig {
 //        return new JpaMemberRepository(em);
 
 //    }
+
+
 }
